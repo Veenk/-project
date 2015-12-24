@@ -300,25 +300,27 @@ def game_loop():
           GameWindow.blit(bg, (0,0))
           GameWindow.blit(model1, (Lx,Rx))
 
-##        if rpunch == rfpunch:          
-##               if orient == forward  and rorient == rforward:
-##                    if punch == forward and (Rx+26 >= Lx+64 and Rx+26 <= Lx+140):
-##                         r_to_win += 1
-##                         lhp -= delta_hp
-##                         compare(l_to_win, r_to_win, win, lhp, rhp)
-##                    elif punch == fpunch and (Rx+26 >= Lx+163 and Rx+26 <= Lx+229):
-##                         r_to_win += 1
-##                         lhp -= delta_hp
-##                         compare(l_to_win, r_to_win, win, lhp, rhp)
-##               elif orient == forward and rorient == rbackward:
-##                    if punch == forward and (Rx+26 >= Lx+40 and Rx+26 <= Lx+110):
-##                         r_to_win += 1
-##                         lhp -= delta_hp
-##                         compare(l_to_win, r_to_win, win, lhp, rhp)
-##                    elif punch == fpunch and (Rx+26 >= Lx+161 and Rx+26 <= Lx+231):
-##                         r_to_win += 1
-##                         lhp -= delta_hp
-##                         compare(l_to_win, r_to_win, win, lhp, rhp)
+        if rpunch == rfpunch:
+               
+               if orient == forward  and rorient == rforward:
+                    print('a')
+                    if punch == forward and (Lx+381 >= Rx+40 and Lx+383 <= Rx+110):
+                         r_to_win += 1
+                         lhp -= delta_hp
+                         compare(l_to_win, r_to_win, win, lhp, rhp)
+                    elif punch == fpunch and (Lx+381 >= Rx+163 and Lx+381 <= Rx+229):
+                         r_to_win += 1
+                         lhp -= delta_hp
+                         compare(l_to_win, r_to_win, win, lhp, rhp)
+               elif orient == forward and rorient == rbackward:
+                    if punch == forward and (Rx+26 >= Lx+40 and Rx+26 <= Lx+110):
+                         r_to_win += 1
+                         lhp -= delta_hp
+                         compare(l_to_win, r_to_win, win, lhp, rhp)
+                    elif punch == fpunch and (Rx+26 >= Lx+161 and Rx+26 <= Lx+231):
+                         r_to_win += 1
+                         lhp -= delta_hp
+                         compare(l_to_win, r_to_win, win, lhp, rhp)
           
         if punch == fpunch:
                if orient == forward and rorient == rforward:
